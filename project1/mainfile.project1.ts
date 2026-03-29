@@ -52,13 +52,3 @@ const user1 = new UserProfile(
 
 console.log(user1.getUsername());  
 
-
-interface Game { 
-    gameName: string
-}; 
-
-const game : Game = { gameName : 'Killer3' }; 
-
-console.log(game); //  prints the whole object: { gameName: 'Killer3' }
-
-console.log(game.gameName); // property access (dot notation).
