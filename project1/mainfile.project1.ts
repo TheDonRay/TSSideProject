@@ -10,7 +10,7 @@ interface UserPassword {
 }; 
 
 interface UserLevel { 
-    level: number
+    level: number 
 }; 
 
 
@@ -31,15 +31,18 @@ class UserProfile {
    }
     // create this function to get users  username as such 
     public getUsername = () => { 
-        return `User's Username is ${this.user.username}`; 
+        return `Username is ${this.user.username}`; 
     }; 
 
-    public getUserLevel = () => { 
-        return `User Level is the following: ${this.level.level}`; 
+    public getUserLevel = () => {  
+        if (this.level.level <= 1) { 
+           return 'User Level Status: noob'; 
+        }
+        return `User Level: ${this.level.level}`; 
     };  
 
     public getUserPassword = () => { 
-        return `Sorry User password is confidential cannot show`; 
+        return `Sorry User password is confidential, cannot show`; 
     }
 };  
 
@@ -48,7 +51,8 @@ const user1 = new UserProfile(
     {name: 'Ray', age: 20, username: 'thedevray'}, 
     {password: '2005gamerboyray'}, 
     {level: 1}, 
-); 
+);  
 
 console.log(user1.getUsername());  
-
+console.log(user1.getUserLevel());  
+console.log(user1.getUserPassword()); 
