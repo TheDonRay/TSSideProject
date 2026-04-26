@@ -70,7 +70,8 @@ ObjectOptional({content: 'valid', data: 'Secret Data', isValid: true});
 ObjectOptional({content: 'valid', isValid: false});  
 
 
-// Type Aliasing: 
+// Type Aliasing:  
+// another way of writing interfaces here 
 type Data = { 
     validData: string
 }; 
