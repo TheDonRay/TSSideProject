@@ -35,3 +35,7 @@ const AccountDetails = {
 }; 
 
 console.log(AccountDetails); 
+ 
+
+// Remember in typescript and Javascript: }Claude responded: This actually won't work!This actually won't work! The ? for optional properties only works inside type or interface definitions, not in a plain object. 
+// in js it wont work either, so the optional property typing is for types and interfaces in Typescript. 
