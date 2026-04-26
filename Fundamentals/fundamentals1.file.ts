@@ -69,3 +69,12 @@ ObjectOptional({content: 'valid', data: 'Secret Data', isValid: true});
 // we can also have the function call as this as well, as you can see both are okay so it doesn't matter 
 ObjectOptional({content: 'valid', isValid: false});  
 
+
+// Type Aliasing: 
+type Data = { 
+    validData: string
+}; 
+
+const newData : Data = {validData: 'Top Secret'}; 
+
+console.log(newData); 
