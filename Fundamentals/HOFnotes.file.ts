@@ -12,7 +12,7 @@ interface userDetails {
 };
 
 // example 1 function here  
-const mainFunction = (execute: () => userDetails) => { 
+const mainFunction = (execute: () => userDetails) : any => { 
     // call the execute parameter here as such 
     execute(); 
 }
@@ -32,4 +32,28 @@ const executeFn = () : any => {
 }; 
 
 // invoke the mainFunction here 
-mainFunction(executeFn);  
+mainFunction(executeFn);   
+
+
+// example of TS format of the function parameter / argument:  
+
+interface classDetails { 
+    className?: string | number, 
+    major: string
+} 
+
+const functionFormat = (studentClassDetails : string ) : classDetails => { 
+    // retrieve students class data here  
+    if (!studentClassDetails) { 
+        throw new Error('No student class Details passed'); 
+    }; 
+    let classData = {  
+        className: `${studentClassDetails} Physics`, 
+        major: 'Computer Science',
+    };  
+    console.log(classData); 
+    return classData;  
+};  
+
+// invoke the function here  
+functionFormat('NewStudent'); 
